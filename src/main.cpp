@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "problem1.hpp"
+#include "problem2.hpp"
 
 auto main () -> int
 {
@@ -28,5 +29,17 @@ auto main () -> int
             std::cout << "Recursive: " << (rs == ex) << std::endl;
         }
     }
+
+    // Problem 2
+    {
+        const std::list<std::string> a = {"a", "b", "c"};
+        const std::list<std::string> b = {"1", "2", "3"};
+
+        const auto rs = interleave (a, b);
+
+        for (const auto& x: rs)
+            std::cout << x << " ";
+    }
+
     return 0;
 }
