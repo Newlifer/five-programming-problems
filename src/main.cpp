@@ -1,7 +1,9 @@
 #include <iostream>
+#include <stdint.h>
 
 #include "problem1.hpp"
 #include "problem2.hpp"
+#include "problem3.hpp"
 
 auto main () -> int
 {
@@ -41,5 +43,13 @@ auto main () -> int
             std::cout << x << " ";
     }
 
+    // Problem 2
+    {
+        const std::size_t max_ = 100;
+        const auto rs = generate_fibonacci<uint64_t> (max_);
+
+        for (const auto& x: rs)
+            std::cout << x << " ";
+    }
     return 0;
 }
